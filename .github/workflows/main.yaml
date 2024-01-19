@@ -15,7 +15,7 @@ jobs:
          run: echo "RUN=$(echo ${{ github.run_number }} | tr / -)" >> $GITHUB_ENV
 
        - name: Output Run Number
-         run: cp prod.sql V1__createuser.sql && rm -rf prod.sql
+         run: cp prod.sql V1.1__createuser.sql && rm -rf prod.sql
                 
        - name: Run a script
          run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine migrate
