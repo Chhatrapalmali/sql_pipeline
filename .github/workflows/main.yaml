@@ -19,3 +19,8 @@ jobs:
                 
        - name: Run a script
          run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine migrate
+       - name: Run a script
+         run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine validate
+
+       - name: Run a script
+         run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine info  
