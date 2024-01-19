@@ -11,7 +11,11 @@ jobs:
      steps:
        - uses: actions/checkout@v3
        
+       - name: Output Run Number
+         run: echo "RUN=$(echo ${{ github.run_number }} | tr / -)" >> $GITHUB_ENV
+
+       - name: Output Run Number
+         run: mv prod.sql V${{ env.BRANCH_NAME }}__createuser.sql
+                
        - name: Run a script
          run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine migrate
-         
-       
