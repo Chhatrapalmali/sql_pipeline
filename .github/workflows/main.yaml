@@ -11,11 +11,7 @@ jobs:
      steps:
        - uses: actions/checkout@v3
        
-       - uses: isbang/compose-action@v1.5.1
-         with:
-          compose-file: "./docker-compose.yaml"
-          services: |
-            flyway
-            
+       - name: Run a script
+         run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine migrate
          
        
