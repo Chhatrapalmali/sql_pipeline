@@ -2,7 +2,7 @@ version: "3"
 services:
     flyway:
         volumes:
-            - $(pwd):/flyway/sql
-            - $(pwd):/flyway/conf
+            - ./:/flyway/sql
+            - ./:/flyway/conf
         image: dhoer/flyway:alpine
         command: migrate
