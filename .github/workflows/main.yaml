@@ -1,11 +1,11 @@
-name: deployment
-on:   
+#name: deployment
+#on:   
    
-   push:
+  # push:
    
-jobs:
-    build:
-     name: Build Web    
+#jobs:
+ #   build:
+ #    name: Build Web    
 
   
      runs-on: self-hosted
