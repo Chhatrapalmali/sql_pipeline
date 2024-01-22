@@ -6,6 +6,7 @@ on:
 jobs:
     build:
      name: Build Web    
+
   
      runs-on: self-hosted
      steps:
