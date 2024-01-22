@@ -18,7 +18,7 @@ jobs:
       #   run: cp prod.sql V1.1__createuser.sql && rm -rf prod.sql
                 
        - name: Run a script
-         run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine migrate
+         run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine clean
        - name: Run a script
          run: docker run --rm -v "./:/flyway/sql" -v "./:/flyway/conf" dhoer/flyway:alpine validate
 
