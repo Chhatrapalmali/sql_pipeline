@@ -1,5 +1,5 @@
 DELETE FROM flyway_schema_history  WHERE version IS NOT NULL;
-create table PERSONAL7 (
+create table PERSONAL72 (
     ID int not null,
     NAME_time varchar(100) not null
 );
